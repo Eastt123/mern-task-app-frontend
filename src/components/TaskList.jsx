@@ -25,7 +25,7 @@ const TaskList = () => {
     const getTasks = async () => {
         setIsLodaing(true);
         try {
-            const {data} = await axios.get("/api/tasks");
+            const { data } = await axios.get(`${URL}/api/tasks`);
             setTasks(data);
             setIsLodaing(false);
         } catch (error) {
